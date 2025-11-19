@@ -1,177 +1,518 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apoio à Formatura - Erick Pietro Silva Vitorio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apoio à Formatura - Erick Pietro Silva Vitorio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4e73df, #1cc88a);
-      color: #fff;
-    }
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #4e73df, #1cc88a);
+        color: #fff;
+      }
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-    }
+      header {
+        text-align: center;
+        padding: 40px 20px;
+      }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      font-weight: bold;
-    }
+      header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bold;
+      }
 
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
+      header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+      .card-premio,
+      .image {
+        background: #f8f9fc;
+        color: #333;
+        border-radius: 20px;
+        padding: 25px;
+        margin: 25px auto;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        max-width: 700px;
+        border-left: 10px solid #4e73df;
+        animation: fadeIn 0.6s ease-in-out;
+      }
+      .image {
+        background-image: url("./iphone.jpg");
+        height: 200px;
 
-    section {
-      background: #fff;
-      color: #333;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 15px;
-      width: 95%;
-      max-width: 900px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.2);
-    }
+        background-repeat: no-repeat;
+        background-size: cover; /* melhor para parallax */
+        background-position: center;
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-      color: #4e73df;
-    }
+        background-attachment: fixed; /* efeito parallax */
+      }
+      .card-premio h3 {
+        margin-top: 0;
+        font-size: 1.8rem;
+        color: #4e73df;
+        text-align: center;
+      }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 1rem;
-    }
+      .card-premio ul {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0;
+      }
 
-    th, td {
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-      text-transform: uppercase;
-    }
-    tr:nth-child(odd){
+      .card-premio ul li {
+        background: #eef2ff;
+        padding: 10px 15px;
+        margin-bottom: 8px;
+        border-radius: 10px;
+        font-size: 1.1rem;
+      }
+
+      .valores {
+        margin: 20px 0;
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 12px;
+        border-left: 6px solid #1cc88a;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .valores p {
+        margin: 5px 0;
+        font-size: 1.1rem;
+      }
+
+      .pix {
+        margin-top: 20px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 12px;
+        border-left: 6px solid #f6c23e;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .pix .chave {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .pix .titular {
+        font-size: 0.95rem;
+        opacity: 0.7;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      section {
+        background: #fff;
+        color: #333;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 15px;
+        width: 95%;
+        max-width: 900px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        color: #4e73df;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 1rem;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      tr:nth-child(odd) {
         background-color: #0789ec47;
-    }
-    th {
-      background: #4e73df;
-      color: #fff;
-    }
+      }
+      th {
+        background: #4e73df;
+        color: #fff;
+      }
 
-    tr:hover {
-      background: #eef2ff;
-    }
+      tr:hover {
+        background: #eef2ff;
+      }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 2rem;
-      opacity: 0.8;
-    }
-  </style>
-</head>
-<body>
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 2rem;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Formatura do Erick Pietro Silva Vitorio</h1>
+      <p>Apoie essa grande conquista!</p>
+    </header>
+    <div class="card-premio">
+      <h3>💵 Informações da Ação</h3>
 
-  <header>
-    <h1>Formatura do Erick Pietro Silva Vitorio</h1>
-    <p>Apoie essa grande conquista!</p>
-  </header>
+      <ul>
+        <li><strong>1° PRÊMIO:</strong> iPhone 13 - 128GB</li>
+        <li><strong>Total de Dezenas:</strong> 1000 (de 000 a 999)</li>
+        <li><strong>Sorteio:</strong> Loteria Federal</li>
+      </ul>
 
-  <section>
-    <h2>Lista de Apoio</h2>
-    <table>
-      <tr><th>Número</th><th>Nome</th></tr>
-      <tr><td>230</td><td>erico</td></tr>
-      <tr><td>231</td><td>erico</td></tr>
-      <tr><td>232</td><td>erico</td></tr>
-      <tr><td>233</td><td></td></tr>
-      <tr><td>234</td><td>eduardo</td></tr>
-      <tr><td>235</td><td></td></tr>
-      <tr><td>236</td><td></td></tr>
-      <tr><td>237</td><td>kleber</td></tr>
-      <tr><td>238</td><td></td></tr>
-      <tr><td>239</td><td></td></tr>
-      <tr><td>240</td><td></td></tr>
-      <tr><td>241</td><td>eduardo</td></tr>
-      <tr><td>242</td><td>alessandro</td></tr>
-      <tr><td>243</td><td>eduardo</td></tr>
-      <tr><td>244</td><td>Martins</td></tr>
-      <tr><td>245</td><td>joão</td></tr>
-      <tr><td>246</td><td>joão</td></tr>
-      <tr><td>247</td><td>joão</td></tr>
-      <tr><td>248</td><td>joão</td></tr>
-      <tr><td>249</td><td>kleber</td></tr>
-      <tr><td>250</td><td>gabriel</td></tr>
-      <tr><td>251</td><td>alessandro</td></tr>
-      <tr><td>252</td><td>eduardo</td></tr>
-      <tr><td>253</td><td></td></tr>
-      <tr><td>254</td><td></td></tr>
-      <tr><td>255</td><td>Martins</td></tr>
-      <tr><td>256</td><td></td></tr>
-      <tr><td>257</td><td>eduardo</td></tr>
-      <tr><td>258</td><td></td></tr>
-      <tr><td>259</td><td></td></tr>
-      <tr><td>260</td><td>alessandro</td></tr>
-      <tr><td>261</td><td>eduardo</td></tr>
-      <tr><td>262</td><td>alessandro</td></tr>
-      <tr><td>263</td><td>disk</td></tr>
-      <tr><td>264</td><td></td></tr>
-      <tr><td>265</td><td></td></tr>
-      <tr><td>266</td><td>alessandro</td></tr>
-      <tr><td>267</td><td></td></tr>
-      <tr><td>268</td><td></td></tr>
-      <tr><td>269</td><td></td></tr>
-      <tr><td>270</td><td></td></tr>
-      <tr><td>271</td><td>alessandro</td></tr>
-      <tr><td>272</td><td>Nunes</td></tr>
-      <tr><td>273</td><td>Nunes</td></tr>
-      <tr><td>274</td><td>Nunes</td></tr>
-      <tr><td>275</td><td>Nunes</td></tr>
-      <tr><td>276</td><td>Nunes</td></tr>
-      <tr><td>277</td><td>Nunes</td></tr>
-      <tr><td>278</td><td>Nunes</td></tr>
-      <tr><td>279</td><td>Nunes</td></tr>
-      <tr><td>280</td><td>Nunes</td></tr>
-      <tr><td>281</td><td>alessandro</td></tr>
-      <tr><td>282</td><td>Nunes</td></tr>
-      <tr><td>283</td><td></td></tr>
-      <tr><td>284</td><td>alessandro</td></tr>
-      <tr><td>285</td><td></td></tr>
-      <tr><td>286</td><td></td></tr>
-      <tr><td>287</td><td>eduardo</td></tr>
-      <tr><td>288</td><td></td></tr>
-      <tr><td>289</td><td>Martins</td></tr>
-      <tr><td>290</td><td></td></tr>
-      <tr><td>291</td><td></td></tr>
-      <tr><td>292</td><td>alessandro</td></tr>
-      <tr><td>293</td><td></td></tr>
-      <tr><td>294</td><td></td></tr>
-      <tr><td>295</td><td>eduardo</td></tr>
-      <tr><td>296</td><td></td></tr>
-      <tr><td>297</td><td></td></tr>
-      <tr><td>298</td><td></td></tr>s
-      <tr><td>299</td><td></td></tr>
-      <tr><td>300</td><td></td></tr>
-      <tr><td>301</td><td>kleber</td></tr>
-      <tr><td>302</td><td>edilson</td></tr>
-      <tr><td>303</td><td>edilson</td></tr>
-      <tr><td>304</td><td>edilson</td></tr>
-      <tr><td>305</td><td>paulo</td></tr>
-    </table>
-  </section>
+      <div class="valores">
+        <p><strong>Valor:</strong></p>
+        <p>1 número → <strong>R$ 7,00</strong></p>
+        <p>3 números → <strong>R$ 20,00</strong></p>
+        <p>10 números → <strong>R$ 50,00</strong></p>
+      </div>
 
-  <footer>
-    Página criada para apoiar a formatura do Erick Pietro Silva Vitorio ❤️
-  </footer>
+      <div class="pix">
+        <p><strong>Chave PIX:</strong></p>
+        <p class="chave">terceiraopix2025@gmail.com</p>
+        <p class="titular">(Victor Gabriel Freitas Souza)</p>
+      </div>
+    </div>
+    <div class="image"></div>
+    <section>
+      <h2>Lista de Apoio</h2>
+      <table>
+        <tr>
+          <th>Número</th>
+          <th>Nome</th>
+        </tr>
+        <tr>
+          <td>230</td>
+          <td>erico</td>
+        </tr>
+        <tr>
+          <td>231</td>
+          <td>erico</td>
+        </tr>
+        <tr>
+          <td>232</td>
+          <td>erico</td>
+        </tr>
+        <tr>
+          <td>233</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>234</td>
+          <td>eduardo</td>
+        </tr>
+        <tr>
+          <td>235</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>236</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>237</td>
+          <td>kleber</td>
+        </tr>
+        <tr>
+          <td>238</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>239</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>240</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>241</td>
+          <td>eduardo</td>
+        </tr>
+        <tr>
+          <td>242</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>243</td>
+          <td>eduardo</td>
+        </tr>
+        <tr>
+          <td>244</td>
+          <td>Martins</td>
+        </tr>
+        <tr>
+          <td>245</td>
+          <td>joão</td>
+        </tr>
+        <tr>
+          <td>246</td>
+          <td>joão</td>
+        </tr>
+        <tr>
+          <td>247</td>
+          <td>joão</td>
+        </tr>
+        <tr>
+          <td>248</td>
+          <td>joão</td>
+        </tr>
+        <tr>
+          <td>249</td>
+          <td>kleber</td>
+        </tr>
+        <tr>
+          <td>250</td>
+          <td>gabriel</td>
+        </tr>
+        <tr>
+          <td>251</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>252</td>
+          <td>eduardo</td>
+        </tr>
+        <tr>
+          <td>253</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>254</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>Martins</td>
+        </tr>
+        <tr>
+          <td>256</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>257</td>
+          <td>eduardo</td>
+        </tr>
+        <tr>
+          <td>258</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>259</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>260</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>261</td>
+          <td>eduardo</td>
+        </tr>
+        <tr>
+          <td>262</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>263</td>
+          <td>disk</td>
+        </tr>
+        <tr>
+          <td>264</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>265</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>266</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>267</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>268</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>269</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>270</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>271</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>272</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>273</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>274</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>275</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>276</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>277</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>278</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>279</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>280</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>281</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>282</td>
+          <td>Nunes</td>
+        </tr>
+        <tr>
+          <td>283</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>284</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>285</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>286</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>287</td>
+          <td>eduardo</td>
+        </tr>
+        <tr>
+          <td>288</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>289</td>
+          <td>Martins</td>
+        </tr>
+        <tr>
+          <td>290</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>291</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>292</td>
+          <td>alessandro</td>
+        </tr>
+        <tr>
+          <td>293</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>294</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>295</td>
+          <td>eduardo</td>
+        </tr>
+        <tr>
+          <td>296</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>297</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>298</td>
+          <td></td>
+        </tr>
+        s
+        <tr>
+          <td>299</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>300</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>301</td>
+          <td>kleber</td>
+        </tr>
+        <tr>
+          <td>302</td>
+          <td>edilson</td>
+        </tr>
+        <tr>
+          <td>303</td>
+          <td>edilson</td>
+        </tr>
+        <tr>
+          <td>304</td>
+          <td>edilson</td>
+        </tr>
+        <tr>
+          <td>305</td>
+          <td>paulo</td>
+        </tr>
+      </table>
+    </section>
 
-</body>
+    <footer>
+      Página criada para apoiar a formatura do Erick Pietro Silva Vitorio ❤️
+    </footer>
+  </body>
 </html>
